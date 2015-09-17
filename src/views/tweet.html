@@ -1,0 +1,15 @@
+<div id="tweet" class="row">
+  <div class="col-sm-12">
+    <textarea id="tweetTemplate" ng-model="tweetText" rows="10" class="form-control"></textarea>
+  </div>
+</div>
+<div id="buttons" class="row">
+  <div class="col-sm-4">
+    <button class="btn btn-primary" ng-click="tweetAs()">Tweet</button>
+  </div>
+  <div class="col-sm-8 form-group">
+    <select id="account-select" ng-model="fromAccount" class="form-control" ng-change="test()">
+      <option value='' disabled>Choose an Account</option>
+      <option ng-repeat = "userAccount in accounts">{{userAccount}}</option>
+    </select>
+  </div>
